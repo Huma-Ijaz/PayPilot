@@ -1,0 +1,303 @@
+*{
+font-family: Arial, Helvetica, sans-serif;
+box-sizing: border-box;
+margin:0;
+padding:0;
+}
+
+body{
+background-color: #f0f3f9;;
+    color: var(--ink);
+    overflow-x: hidden;
+height: 100vh;
+width: 100%;
+}
+
+header{
+background-color: #0d2b6e;
+color: white;
+position: fixed;
+height: 15%;
+width: 100%;
+padding: 40px;
+}
+/*Navigation Bar*/
+nav{
+height: 15%;
+width:100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+nav ul{
+list-style: none;
+display: flex;
+gap: 20px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-family: Arial;
+font-weight:bold;
+font-size: 20px;
+gap: 10px;
+}
+/*Launching Tag*/
+.launching{
+    color:#1a6ef5;
+    font-size: 15px;
+    letter-spacing:2px;
+    text-transform: uppercase;
+    font-weight:bolder;
+    margin-left: 2%;
+    padding:5px;
+}
+/*Main Div Classes of Index Pages */
+.div1{
+background-color: var(--slate-50);
+height: 120%;
+width:100%;
+display: flex;
+justify-content: space-between;
+align-items:center;
+}
+
+/*Heading*/
+h1{
+color:#0d2b6e;
+font-size:60px;
+}
+/*Emphasis Tag*/
+em{
+color:#1a6ef5;
+}
+
+em1{
+color:#ff6b4a;
+}
+/*Paragraph Tag*/
+p{
+color:#285cae;
+}
+/*Div1 Left side*/
+#left{
+height:70%;
+width:40%;
+margin:20px;
+margin-top: 7%;
+color:white;
+padding: 40px;
+}
+/*Buttons*/
+button{
+border-radius: 10px;
+padding:7px;
+font-weight: bold; 
+}
+.login{
+height: 10%;
+width:20%;
+color:black;
+background-color:white; 
+border-color: white;
+}
+.signup{
+height: 10%;
+width:45%;
+color:white;
+background-color:#1a6ef5;
+border-color:#1a6ef5 ;
+border-radius: 10px;
+padding:7px;
+align-items: center;
+}
+/*Div1 Right side*/
+#right{
+height:70%;
+width:50%;
+margin:90px;
+margin-top: 10%;
+padding:20px;
+}
+#top{
+    height: 60%;
+    width: 100%;
+    background-color:#0d2b6e;
+    padding: 20px;
+    border-radius: 10px;
+}
+#bottom{
+    height: 50%;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+#bottom-left{
+    height: 80%;
+    width:100%;
+    background-color:#89cff0;
+    border-radius: 10px;
+}
+#bottom-right{
+    height: 80%;
+    width: 100%;
+    background-color:#89cff0;
+    border-radius: 10px;
+}
+/*Designing in right side*/
+.h1-right{
+    color:white;
+    font-weight: 900;
+    font-display: block;
+    margin-left:5%;
+}
+.h1-left{
+    color:#285cae;
+    font-style: normal;
+    margin-left:5%;
+    font-size: large;
+}
+.p-right{
+    color:rgb(210, 200, 200);
+    font-weight: normal;
+    align-items: center;
+    margin:5%;
+
+}
+/*Icons*/
+.icon{
+   font-size:40px;
+   margin:50px;
+   
+}
+
+ /* Div 2 */
+.div2{
+background-color: #0d2b6e;
+height: 60%;
+width:100%;
+display: flex;
+flex-direction: column;
+}
+
+.box2{
+    height: 80%;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    color:#1a6ef5;
+}
+
+.box{
+    height: 80%;
+    width: 20%;
+    gap: 20px;
+    border-radius: 10px;
+    margin: 8px;
+    padding: 10px;
+}
+
+h{
+    font-size: 0.8cm;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    margin:5%;
+}
+
+#heading{
+    margin-top:2%;
+    color: #e7feff;
+    font-size: 0.5cm;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    padding:20px;
+    margin: 0%;
+    }
+
+/* Div 3 */
+.div3{
+background-color: var(--slate-50);
+height: 60%;
+width:100%;
+display: flex;
+justify-content: space-between;
+align-itmes:center;
+}
+
+#h1-div3{
+color:#0d2b6e;
+font-size:50px;
+padding:70px;
+}
+
+#box3{
+height: 60%;
+width:35%;
+margin-top: 7%;
+margin-right: 5%;
+padding:40px;
+align-items: center;
+}
+
+.signup3{
+height:40%;
+width:50%;
+background-color: #1a6ef5;
+color:white;
+font-family: Arial, Helvetica, sans-serif;
+font-display: block;
+border-color:#1a6ef5;
+}
+
+.login3{
+height:40%;
+width:30%;
+color:black;
+font-family: Arial, Helvetica, sans-serif;
+border-color:#e7feff ;
+}
+
+/* Footer */
+.div4{
+background-color: #0d2b6e;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding:10px 20px;
+
+}
+
+.div4 h4{
+    color:#e7feff;
+    margin:0;
+    padding: 5px;
+}
+
+
+h4{
+    color:#e7feff;
+    align-items: center;
+    padding: 2%;
+    margin-left: 37%;
+    display: flex;
+}
+
+#h4-right{
+   color:#e7feff;
+   font-weight: 200;
+   padding: 2%;
+   margin-left: 5%;
+}
+
+#h4-left{
+     color:#e7feff;
+    font-weight: 200;
+     padding: 2%;
+    margin-right:5%; 
+}
