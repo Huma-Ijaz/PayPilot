@@ -1,0 +1,304 @@
+<html>
+    <head>
+        <title> History </title>
+<link rel = "stylesheet" href="History.css">
+    </head>
+    <body>
+        <Header><nav>
+<h2> Pay<em>Pilot</em> </h2>
+<ul>
+    <li> <a href="file:///C:/Users/alico/OneDrive/Desktop/Web%20Project/Dashboard.html"><h4>←Dashboard</h4> </a></li>
+    <li><div class="user-dropdown">
+    <button class="user-btn">
+        <div class="user-avatar">AH</div>  <!-- initials -->
+        Ali Hassan                          <!-- name -->
+        <span class="chevron">▾</span>     <!-- arrow -->
+    </button>
+</div></li>
+</ul>
+</nav></Header>
+<div class="set">
+<h2>Transaction History</h2>
+<p>All your past payments and transfers in one place.</p>
+
+<div class="amount-buttons">
+  <span class="box" onclick="showTab('1', this)">All</span>
+  <span class="box" onclick="showTab('2', this)">Sent</span>
+  <span class="box" onclick="showTab('3', this)">Received</span>
+  <span class="box" onclick="showTab('4', this)">Top up</span></div>
+
+  <br>
+<div class="table-section" id = "1">
+  <table>
+    <thead>
+      <tr>
+        <th>Transaction ID</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Amount</th>
+        <th>Date</th>
+        <th>Status</th>
+        <th> </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><p>TXN-001</p></td>
+        <td class="td-name">Sara Khan</td>
+        <td>Sent</td>
+        <td class="td-sent">− PKR 2,500</td>
+        <td>20 Mar 2026</td>
+        <td><span class="badge badge-success">Completed</span></td>
+        <td><a href="#" class="table-link">View all →</a></td>
+      </tr>
+      <tr>
+        <td><p>TXN-002</p></td>
+        <td class="td-name">Ahmed Ali</td>
+        <td>Received</td>
+        <td class="td-received">+ PKR 5,000</td>
+        <td>19 Mar 2026</td>
+        <td><span class="badge badge-success">Completed</span></td>
+        <td><a href="#" class="table-link">View all →</a></td>
+        </tr>
+
+           <tr>
+        <td><p>TXN-003</p></td>
+        <td class="td-name">Jazzcash</td>
+        <td>Top up</td>
+        <td class="td-topup">− PKR 4,000</td>
+        <td>20 June 2026</td>
+        <td><span class="badge badge-success">Completed</span></td>
+        <td><a href="#" class="table-link">View all →</a></td>
+      </tr>
+
+        <tr>
+        <td><p>TXN-004</p></td>
+        <td class="td-name">Bilal Raza</td>
+        <td>Sent</td>
+        <td class="td-sent">− PKR 1,500</td>
+        <td>17 Mar 2026</td>
+        <td><span class="badge badge-danger">Failed</span></td>
+        <td><a href="#" class="table-link">View all →</a></td>
+        </tr>
+
+         <tr>
+        <td><p>TXN-005</p></td>
+        <td class="td-name">Ayesha Ali</td>
+        <td>Received</td>
+        <td class="td-received">+ PKR 8,000</td>
+        <td>20 May 2025</td>
+        <td><span class="badge badge-success">Completed</span></td>
+        <td><a href="#" class="table-link">View all →</a></td>
+        </tr>
+
+        <tr>
+        <td><p>TXN-006</p></td>
+        <td class="td-name">Easy Paisa</td>
+        <td>Top up</td>
+        <td class="td-topup" >− PKR 4,500</td>
+        <td>20 Jan 2026</td>
+        <td><span class="badge badge-success">Completed</span></td>
+        <td><a href="#" class="table-link">View all →</a></td>
+        </tr>
+
+         <tr>
+        <td><p>TXN-007</p></td>
+        <td class="td-name">Iman Tahir</td>
+        <td>Sent</td>
+        <td class="td-sent">− PKR 1,000</td>
+        <td>17 Oct 2025</td>
+        <td><span class="badge badge-danger">Failed</span></td>
+        <td><a href="#" class="table-link">View all →</a></td>
+        </tr>
+
+      <tr>
+        <td><p>TXN-008</p></td>
+        <td class="td-name">Amjad Ali</td>
+        <td>Received</td>
+        <td class="td-received">+ PKR 4,000</td>
+        <td>19 Sept 2025</td>
+        <td><span class="badge badge-success">Completed</span></td>
+        <td><a href="#" class="table-link">View all →</a></td>
+    </tr>
+
+       <tr>
+        <td><p>TXN-009</p></td>
+        <td class="td-name">Naya Pay</td>
+        <td>Top up</td>
+        <td class="td-topup">− PKR 1,000</td>
+        <td>20 Feb 2026</td>
+        <td><span class="badge badge-success">Completed</span></td>
+        <td><a href="#" class="table-link">View all →</a></td>
+      </tr>
+
+    </tbody>
+  </table></div>
+
+  <div class="table-section" id = "2">
+  <table>
+    <thead>
+      <tr>
+        <th>Transaction ID</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Amount</th>
+        <th>Date</th>
+        <th>Status</th>
+        <th> </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><p>TXN-001</p></td>
+        <td class="td-name">Sara Khan</td>
+        <td>Sent</td>
+        <td class="td-sent">− PKR 2,500</td>
+        <td>20 Mar 2026</td>
+        <td><span class="badge badge-success">Completed</span></td>
+        <td><a href="#" class="table-link">View all →</a></td>
+      </tr>
+    
+      <tr>
+        <td><p>TXN-004</p></td>
+        <td class="td-name">Bilal Raza</td>
+        <td>Sent</td>
+        <td class="td-sent">− PKR 1,500</td>
+        <td>17 Mar 2026</td>
+        <td><span class="badge badge-danger">Failed</span></td>
+        <td><a href="#" class="table-link">View all →</a></td>
+  </tr>
+
+    <tr>
+        <td><p>TXN-007</p></td>
+        <td class="td-name">Iman Tahir</td>
+        <td>Sent</td>
+        <td class="td-sent">− PKR 1,000</td>
+        <td>17 Oct 2025</td>
+        <td><span class="badge badge-success">Completed</span></td>
+        <td><a href="#" class="table-link">View all →</a></td>
+        </tr>
+    </tbody>
+  </table></div>
+
+   <div class="table-section" id = "3">
+  <table>
+    <thead>
+      <tr>
+        <th>Transaction ID</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Amount</th>
+        <th>Date</th>
+        <th>Status</th>
+        <th> </th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td><p>TXN-002</p></td>
+        <td class="td-name">Ahmed Ali</td>
+        <td>Received</td>
+        <td class="td-received">+ PKR 5,000</td>
+        <td>19 Mar 2026</td>
+        <td><span class="badge badge-success">Completed</span></td>
+        <td><a href="#" class="table-link">View all →</a></td>
+        </tr>
+              
+
+      
+        <tr>
+        <td><p>TXN-005</p></td>
+        <td class="td-name">Ayesha Ali</td>
+        <td>Received</td>
+        <td class="td-received">+ PKR 8,000</td>
+        <td>20 May 2025</td>
+        <td><span class="badge badge-success">Completed</span></td>
+        <td><a href="#" class="table-link">View all →</a></td>
+        </tr>
+
+    <tr>
+        <td><p>TXN-008</p></td>
+        <td class="td-name">Amjad Ali</td>
+        <td>Received</td>
+        <td class="td-received">+ PKR 4,000</td>
+        <td>19 Sept 2025</td>
+        <td><span class="badge badge-success">Completed</span></td>
+        <td><a href="#" class="table-link">View all →</a></td>
+    </tr>
+
+    </tbody>
+  </table></div>
+
+    <div class="table-section" id = "4">
+  <table>
+    <thead>
+      <tr>
+        <th>Transaction ID</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Amount</th>
+        <th>Date</th>
+        <th>Status</th>
+        <th> </th>
+      </tr>
+    </thead>
+    <tbody>
+               <tr>
+        <td><p>TXN-003</p></td>
+        <td class="td-name">Jazzcash</td>
+        <td>Top up</td>
+        <td class="td-topup">− PKR 4,000</td>
+        <td>20 June 2026</td>
+        <td><span class="badge badge-success">Completed</span></td>
+        <td><a href="#" class="table-link">View all →</a></td>
+      </tr>
+              
+       <tr>
+        <td><p>TXN-006</p></td>
+        <td class="td-name">Easy Paisa</td>
+        <td>Top up</td>
+        <td class="td-topup" >− PKR 4,500</td>
+        <td>20 Jan 2026</td>
+        <td><span class="badge badge-success">Completed</span></td>
+        <td><a href="#" class="table-link">View all →</a></td>
+        </tr>
+
+       <tr>
+        <td><p>TXN-009</p></td>
+        <td class="td-name">Naya Pay</td>
+        <td>Top up</td>
+        <td class="td-topup">− PKR 1,000</td>
+        <td>20 Feb 2026</td>
+        <td><span class="badge badge-success">Completed</span></td>
+        <td><a href="#" class="table-link">View all →</a></td>
+      </tr>
+
+    </tbody>
+  </table></div>
+
+  <script>
+  // Show the "All" table on page load
+  document.getElementById('1').style.display = 'block';
+ 
+  function showTab(tabId, clickedBtn) {
+    // Hide all table sections
+    document.querySelectorAll('.table-section').forEach(function(section) {
+      section.style.display = 'none';
+    });
+ 
+    // Remove active class from all buttons
+    document.querySelectorAll('.box').forEach(function(btn) {
+      btn.classList.remove('active');
+    });
+ 
+    // Show the selected table
+    document.getElementById(tabId).style.display = 'block';
+ 
+    // Mark the clicked button as active
+    clickedBtn.classList.add('active');
+  }
+</script>
+
+
+
+</body></html>

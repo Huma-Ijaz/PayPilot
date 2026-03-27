@@ -6,11 +6,12 @@ padding:0;
 }
 
 body{
-background-color: #f0f3f9;;
+background-color: #f0f3f9;
     color: var(--ink);
     overflow-x: hidden;
 height: 100vh;
 width: 100%;
+
 }
 
 
@@ -21,6 +22,7 @@ background-color: white;
 display: flex;
 justify-content: space-between;
 align-items: center;
+
 }
 
 nav ul{
@@ -36,6 +38,11 @@ font-family: Arial;
 font-weight:bold;
 font-size: 20px;
 gap: 10px;
+}
+
+li{
+    color:black;
+    margin-top:1% ;
 }
 
 /* the whole button look */
@@ -68,10 +75,6 @@ em{
 color:#1a6ef5;
 }
 
-li{
-    color:black;
-    margin-top:1% ;
-}
 
 h2{
     color: black;
@@ -81,142 +84,47 @@ h2{
     font-weight: bold;
 }
 
+
 h4{
     color:gray;
-    margin-top: 25%;
-    font-size: larger;
+    margin-top: 10%;
 }
 
-.launching {
-  color: #1a6ef5;
-  font-size: 15px;
-  letter-spacing: 2px;
-  font-weight: bolder;
-  border: 1px solid rgba(26,110,245,0.18);
-  padding: 5px 15px;
-  border-radius: 20px;
-  margin-bottom: 28px;
-  background-color: #ebf2ff;
-  display: inline-block;
+p{
+    color:gray;
+    margin-left: 2%;
+  
 }
 
-em{
-color:#1a6ef5;
-}
-
-em1{
-    font-family: 'Fraunces',serif;
-    color:#f0f3f9;
-    padding:5px;
-    font-display: block;
-    font-size: 1cm;
-
-}
-
-
-
-
-h1{
-    color:black;
-    font-style: italic;
-    font-size:30px;
-    font-family: 'Fraunces', serif;
-    font-weight: 700;
+.set{
     padding-top:30px;
     margin-left:5%;
 }
 
-p{
-    color: #7e8388;
-    margin-left:5%;
-    
-}
-
-.display-card{
-    background-color: #0d2b6e;
-    width:85%;
-    height:35%;
-    padding:30px;
-    margin-left: 5%;
-    border-radius: 16px;
-    
-}
-
-.cardbox{
-    height:60%;
-    width:40%;
+.amount-buttons {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 30px;
-    margin-left: 3%;
+    gap: 10px;
+    margin-top: 15px;
+        margin-left: 2%;
+
 }
 
-.divider{
-    height:60;
-    width:2px;
-    background-color: gray;
-}
-em2{
-    color: coral;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: larger;
-    font-weight: bold;
+.box {
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: #f5f7fb;
+    border: 1px solid #d0d7e2;
+    cursor: pointer;
 }
 
-em3{
-    color: rgb(10, 176, 10);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: larger;
-    font-weight: bold;
-}
-
-.display-card1{
-    width:85%;
-    height:35%;
-    padding:30px;
-    margin-left: 5%;
-    border-radius: 16px;
-  
-}
-
-.cardgrid{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-}
-
-.gridbox{
-    height:3.5cm;
-    width: 97%;
-    background-color: white;
-    border-radius: 16px;
-    text-align: center;
-    gap:10px;
-}
-
-/* Outer wrapper */
 .table-section {
   background: #ffffff;
   border: 1.5px solid #e4e9f2;
   border-radius: 20px;
   overflow: hidden;
   width:90%;
-  margin-left: 5%;
-}
-
-/* Top header row */
-.table-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 28px;
-  border-bottom: 1px solid #e4e9f2;
-}
-
-.table-title {
-  font-size: 15px;
-  font-weight: 700;
-  color: #0f1c2e;
+  margin-left: 2%;
+  display:none;
 }
 
 .table-link {
@@ -226,7 +134,7 @@ em3{
   text-decoration: none;
 }
 
-/* Table itself */
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -245,7 +153,6 @@ thead th {
   border-bottom: 1px solid #e4e9f2;
 }
 
-/* Body rows */
 tbody tr {
   border-bottom: 1px solid #e4e9f2;
 }
@@ -271,7 +178,7 @@ tbody td {
   color: #0f1c2e;
 }
 
-/* Amount colors */
+
 .td-sent {
   color: #e53e3e;
   font-weight: 700;
@@ -282,21 +189,25 @@ tbody td {
   font-weight: 700;
 }
 
-/* Status badges */
-.badge {
-  display: inline-block;
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 11px;
+.td-topup {
+  color: #1a6ef5;
   font-weight: 700;
 }
 
+.badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+ 
 .badge-success {
-  background: #e6f9f3;
+  background-color: #e6f9f2;
   color: #00b37e;
 }
-
+ 
 .badge-danger {
-  background: #fff5f5;
+  background-color: #fdecea;
   color: #e53e3e;
 }
+
