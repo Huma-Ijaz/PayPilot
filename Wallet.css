@@ -6,7 +6,7 @@ padding:0;
 }
 
 body{
-background-color: #f0f3f9;;
+background-color: #f0f3f9;
     color: var(--ink);
     overflow-x: hidden;
 height: 100vh;
@@ -36,6 +36,11 @@ font-family: Arial;
 font-weight:bold;
 font-size: 20px;
 gap: 10px;
+}
+
+li{
+    color:black;
+    margin-top:1% ;
 }
 
 /* the whole button look */
@@ -68,40 +73,16 @@ em{
 color:#1a6ef5;
 }
 
-li{
-    color:black;
-    margin-top:1% ;
-}
 
 h2{
     color: black;
     margin-left: 2%;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 30px;
-    font-weight: bold;
 }
 
 h4{
-    color:gray;
-    margin-top: 25%;
-    font-size: larger;
-}
-
-.launching {
-  color: #1a6ef5;
-  font-size: 15px;
-  letter-spacing: 2px;
-  font-weight: bolder;
-  border: 1px solid rgba(26,110,245,0.18);
-  padding: 5px 15px;
-  border-radius: 20px;
-  margin-bottom: 28px;
-  background-color: #ebf2ff;
-  display: inline-block;
-}
-
-em{
-color:#1a6ef5;
+    color:black;
+    margin-left: 5%;
+    margin-top:5%;
 }
 
 em1{
@@ -124,8 +105,10 @@ h1{
 }
 
 p{
-    color: #7e8388;
+    color: #b5bec9;
     margin-left:5%;
+    font-size: 15px;
+    font-weight: bold;
     
 }
 
@@ -160,70 +143,112 @@ em2{
     font-size: larger;
     font-weight: bold;
 }
-
 em3{
-    color: rgb(10, 176, 10);
+    color: rgb(123, 218, 123);
     font-family: Arial, Helvetica, sans-serif;
     font-size: larger;
     font-weight: bold;
 }
 
-.display-card1{
-    width:85%;
-    height:35%;
-    padding:30px;
-    margin-left: 5%;
-    border-radius: 16px;
-  
-}
-
-.cardgrid{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-}
-
-.gridbox{
-    height:3.5cm;
-    width: 97%;
+.card{
+    height:70%;
+    width:40%;
     background-color: white;
-    border-radius: 16px;
-    text-align: center;
-    gap:10px;
+    border-radius:10px;
+    margin-left: 5%;
+    padding:5px;
 }
 
-/* Outer wrapper */
+.field {
+  margin-bottom: 16px;
+  margin-left: 25px ;
+}
+ 
+.field label {
+  display: block;
+  margin-bottom: 4px;
+  color: #333;
+  font-weight: lighter;
+  font-size: 15;
+  margin-top: 5%;
+  margin-left: 5px;
+}
+ 
+input[type="text"],
+input[type="password"] {
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.amount-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.box {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f5f7fb;
+    border: 1px solid #d0d7e2;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.footer{
+    height:10%;
+    width:100%;
+    background-color: #f0f3f9;
+}
+
+.input-field {
+  width: 80%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.btn{
+    height:10%;
+    width: 78%;
+    background-color: #1a6ef5;
+    color:white;
+    font-size: medium;
+    font-weight: bold;
+    border-color: #1a6ef5;
+    border-radius: 10px;
+     margin-top: 5px;
+     margin-bottom: 2%;
+    padding: 10px;
+    margin-left: 5%;
+}
+
+.right{
+    height:50%;
+    width:50%;
+    margin-right:20%;
+    margin-top: 5px;
+    padding:1px;
+}
+
+.box2{
+    display: flex;
+    justify-content: space-between;
+    gap:5px;
+}
+
 .table-section {
-  background: #ffffff;
-  border: 1.5px solid #e4e9f2;
+  background: white;
+  border: 2.5px solid #adb1b9;
   border-radius: 20px;
   overflow: hidden;
   width:90%;
-  margin-left: 5%;
+  margin-left: 2%;
 }
 
-/* Top header row */
-.table-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 28px;
-  border-bottom: 1px solid #e4e9f2;
-}
-
-.table-title {
-  font-size: 15px;
-  font-weight: 700;
-  color: #0f1c2e;
-}
-
-.table-link {
-  font-size: 13px;
-  font-weight: 600;
-  color: #1a6ef5;
-  text-decoration: none;
-}
-
-/* Table itself */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -238,11 +263,11 @@ thead th {
   letter-spacing: 1.2px;
   text-transform: uppercase;
   color: #7b8fb5;
-  background: #f0f3f9;
+  background: #dbdde1;
   border-bottom: 1px solid #e4e9f2;
 }
 
-/* Body rows */
+
 tbody tr {
   border-bottom: 1px solid #e4e9f2;
 }
@@ -268,32 +293,30 @@ tbody td {
   color: #0f1c2e;
 }
 
-/* Amount colors */
-.td-sent {
-  color: #e53e3e;
+.td-topup {
+  color: #1a6ef5;
   font-weight: 700;
 }
 
-.td-received {
-  color: #00b37e;
-  font-weight: 700;
+.display-card1{
+    width:120%;
+    height:35%;
+    padding:20px;
+    margin-left: 3%;
+    border-radius: 16px;
+  
 }
 
-/* Status badges */
-.badge {
-  display: inline-block;
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 11px;
-  font-weight: 700;
+.cardgrid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
 }
 
-.badge-success {
-  background: #e6f9f3;
-  color: #00b37e;
-}
-
-.badge-danger {
-  background: #fff5f5;
-  color: #e53e3e;
+.gridbox{
+    height:3.5cm;
+    width: 97%;
+    background-color: white;
+    border-radius: 16px;
+    gap:20px;
+    text-align: center;
 }

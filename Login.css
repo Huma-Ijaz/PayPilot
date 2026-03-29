@@ -13,8 +13,6 @@ height: 100vh;
 width: 100%;
 }
 
-
-
 .signup{
 height: 10%;
 width:45%;
@@ -122,6 +120,12 @@ p{
     font-size:90px;
 }
 
+.field {
+    margin-top: 20px;
+    margin-bottom: 16px;
+    width:100%;
+}
+
 #box{
     height:12%;
     width:70%;
@@ -163,21 +167,20 @@ font-size: large;
   border: 1px solid rgba(26,110,245,0.18);
   padding: 5px 15px;
   border-radius: 20px;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   background-color: #ebf2ff;
   display: inline-block;
 }
  
 /* ── Form fields ── */
-.field {
-  margin-bottom: 16px;
-}
+
  
 .field label {
   display: block;
   margin-bottom: 4px;
   color: #333;
-  font-weight: bold;
+ font-weight: bolder;
+  font-size: 15;
 }
  
 input[type="text"],
@@ -187,8 +190,6 @@ input[type="password"] {
   border-radius: 5px;
   border: 1px solid #ccc;
 }
-
-
 
 
 /* Footer */
