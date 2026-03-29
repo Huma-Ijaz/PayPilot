@@ -50,3 +50,7 @@ p {
 h4 {
     color: #1a6ef5;
 }
+
+h4 em {
+    font-style: normal;
+}

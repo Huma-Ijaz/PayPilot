@@ -73,6 +73,10 @@ em{
 color:#1a6ef5;
 }
 
+nav h2 em {
+    font-style: normal;
+}
+
 
 h2{
     color: black;

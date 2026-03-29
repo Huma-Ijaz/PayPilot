@@ -68,6 +68,10 @@ em{
 color:#1a6ef5;
 }
 
+nav h2 em {
+  font-style: normal;
+}
+
 li{
     color:black;
     margin-top:1% ;

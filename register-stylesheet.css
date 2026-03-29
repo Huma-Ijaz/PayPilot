@@ -124,6 +124,12 @@ em {
     color: #1a6ef5;
 }
 
+.h2-nav em,
+.launching em,
+.brand em {
+    font-style: normal;
+}
+
 .features{
     display: flex;
     justify-content: center;

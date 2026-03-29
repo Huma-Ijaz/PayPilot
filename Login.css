@@ -93,6 +93,12 @@ em{
 color:#1a6ef5;
 }
 
+nav h2 em,
+#left h1 em,
+#h4-right em {
+    font-style: normal;
+}
+
 p{
    color: rgb(210, 200, 200);
    font-size: small;
