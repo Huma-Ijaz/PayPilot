@@ -8,7 +8,7 @@ if(!isset($_SESSION['user_id'])) {
         echo json_encode(['success' => false, 'error' => 'Not logged in', 'redirect' => 'login.html']);
         exit;
     }
-    header('Location: login.html');
+    header('Location: ../login.html');
     exit;
 }
 ?>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'db.php';
+require __DIR__ . '/db.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         // Go to dashboard
-        header('Location: Dashboard.html');
+        header('Location: ../Dashboard.php');
         exit;
 
     } else {

@@ -1,6 +1,6 @@
 <?php
-require 'session_check.php';
-require 'db.php';
+require __DIR__ . '/session_check.php';
+require __DIR__ . '/db.php';
 
 header('Content-Type: application/json');
 
