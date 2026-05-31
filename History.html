@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <title> History </title>
-<link rel = "stylesheet" href="css/History.css">
+        <link rel = "stylesheet" href="css/History.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     </head>
     <body>
         <header><nav>
@@ -24,10 +25,11 @@
 <p>All your past payments and transfers in one place.</p>
 
 <div class="amount-buttons">
-  <span class="box" onclick="showTab('1', this)">All</span>
-  <span class="box" onclick="showTab('2', this)">Sent</span>
-  <span class="box" onclick="showTab('3', this)">Received</span>
-  <span class="box" onclick="showTab('4', this)">Top up</span></div>
+  <span class="box" data-tab="1">All</span>
+  <span class="box" data-tab="2">Sent</span>
+  <span class="box" data-tab="3">Received</span>
+  <span class="box" data-tab="4">Top up</span>
+</div>
 
   <br>
 <div class="table-section" id = "1">
@@ -279,28 +281,21 @@
   </table></div>
 
   <script>
-  // Show the "All" table on page load
-  document.getElementById('1').style.display = 'block';
- 
-  function showTab(tabId, clickedBtn) {
-    // Hide all table sections
-    document.querySelectorAll('.table-section').forEach(function(section) {
-      section.style.display = 'none';
-    });
- 
-    // Remove active class from all buttons
-    document.querySelectorAll('.box').forEach(function(btn) {
-      btn.classList.remove('active');
-    });
- 
-    // Show the selected table
-    document.getElementById(tabId).style.display = 'block';
- 
-    // Mark the clicked button as active
-    clickedBtn.classList.add('active');
-  }
-</script>
+  $(function() {
 
+    $('#1').show();
+    $('[data-tab="1"]').addClass('active');
+
+    $('.box').on('click', function() {
+      $('.table-section').hide();
+      $('.box').removeClass('active');
+      $(this).addClass('active');
+      var id = $(this).data('tab');
+      $('#' + id).show();
+    });
+
+  });
+</script>
 
 
 </body></html>

@@ -85,5 +85,39 @@
   </table>
 
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+
+    fetch('get_transactions.php')
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        renderTable(data);
+      });
+
+    function renderTable(data) {
+      var tbody = document.querySelector('tbody');
+      tbody.innerHTML = '';
+
+      data.forEach(function(row) {
+        var amountClass = row.type === 'sent' ? 'td-sent' : 'td-received';
+        var amountSign = row.type === 'sent' ? '− PKR ' : '+ PKR ';
+        var badgeClass = row.status === 'completed' ? 'badge-success' : 'badge-danger';
+
+        tbody.innerHTML += '<tr>' +
+          '<td class="td-name">' + row.recipient + '</td>' +
+          '<td>' + row.type + '</td>' +
+          '<td class="' + amountClass + '">' + amountSign + row.amount + '</td>' +
+          '<td>' + row.created_at + '</td>' +
+          '<td><span class="badge ' + badgeClass + '">' + row.status + '</span></td>' +
+          '</tr>';
+      });
+    }
+
+  });
+</script>
+
 </body>
 </html>
