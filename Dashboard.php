@@ -85,7 +85,7 @@ $balance = $received + $topup - $sent;
     <div class="gridbox" onclick="window.location.href='Send.html'"><h1>💸</h1><br><p>Send Money</p></div>
     <div class="gridbox" onclick="alert('Request feature coming soon!')"><h1>📥</h1><br><p>Request</p></div>
     <div class="gridbox" onclick="window.location.href='Wallet.html'"><h1>👛</h1><br><p>Top up</p></div>
-    <div class="gridbox" onclick="window.location.href='History.html'"><h1>🗒️</h1><br><p>History</p></div>
+    <div class="gridbox" onclick="window.location.href='History.php'"><h1>🗒️</h1><br><p>History</p></div>
   </div>
 </div>
 
@@ -94,7 +94,7 @@ $balance = $received + $topup - $sent;
   <!-- Table Header -->
   <div class="table-header">
     <span class="table-title">Recent Transactions</span>
-    <a href="History.html" class="table-link">View all →</a>
+    <a href="History.php" class="table-link">View all →</a>
   </div>
 
   <!-- Table -->
