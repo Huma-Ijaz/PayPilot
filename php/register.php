@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         session_start();
         $_SESSION['user_id'] = $conn->insert_id;
         $_SESSION['name']    = $name;
-        header('Location: ../Dashboard.php');
+        header('Location: ../dashboard.php');
         exit;
     } else {
         // Email already exists

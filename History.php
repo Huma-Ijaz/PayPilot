@@ -55,14 +55,14 @@ function buildRows($transactions) {
 <html>
 <head>
     <title>History</title>
-    <link rel="stylesheet" href="css/History.css">
+    <link rel="stylesheet" href="css/history.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
     <header><nav>
         <h2>Pay<em>Pilot</em></h2>
         <ul>
-            <li><a href="Dashboard.php"><h4>←Dashboard</h4></a></li>
+            <li><a href="dashboard.php"><h4>←Dashboard</h4></a></li>
             <li><div class="user-dropdown">
                 <button class="user-btn">
                     <div class="user-avatar"><?php echo strtoupper(substr($_SESSION['name'] ?? 'U', 0, 2)); ?></div>

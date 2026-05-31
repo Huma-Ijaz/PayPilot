@@ -16,7 +16,7 @@ $user = $result->fetch_assoc();
 <head>
     <meta charset="UTF-8">
     <title>PayPilot — Profile</title>
-    <link rel="stylesheet" href="css/profile-stylesheet.css">
+    <link rel="stylesheet" href="css/profile.css">
 </head>
 <body>
 
@@ -24,11 +24,11 @@ $user = $result->fetch_assoc();
         <nav>
             <h2 class="h2-nav">Pay<em>Pilot</em></h2>
             <ul>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#" class="sign-up">Sign-up</a></li>
+                <li><a href="index.html">Features</a></li>
+                <li><a href="index.html">Pricing</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html" class="sign-up">Sign-up</a></li>
             </ul>
         </nav>
     </header>
@@ -126,7 +126,7 @@ $user = $result->fetch_assoc();
         formData.append('name', name);
         formData.append('phone', phone);
 
-        fetch('php/profile.php', {
+        fetch('php/profile_update.php', {
             method: 'POST',
             body: formData
         })
