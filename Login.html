@@ -51,23 +51,26 @@
 <p class="p-right">Log into your Paypilot account to Continue</p>
 <br>
 
-<form><table id="table">
-<tr><td width="100%"  class="field"><label>Email Address</label><input type= "text" placeholder= "your@gmail.com" size="40"> </td></tr>
+<form id="login-form" action="login.php" method="POST"><table id="table">
+<tr><td width="100%"  class="field"><label>Email Address</label>
+<input type="email" id="email" name="email" placeholder= "your@gmail.com" > </td></tr>
 <tr><td class="field"> </td></tr>
-<tr ><td width="100%"  class="field"><label>Password</label><input type= "password" placeholder= "Password" size="40"></td></tr>
+<tr><td width="100%"  class="field"><label>Password</label>
+    <input type="password" id="password" name="password" placeholder= "Password" ></td></tr>
 </table></form>
+
 <table style="width:100%; margin-top:10px;">
 <tr>
     <td>
-        <input type="checkbox" checked> Remember me
+    <input type="checkbox" id="remember" name="remember" checked> Remember me
     </td>
 
     <td style="text-align: right;">
         <a href="#">Forgot Password?</a>
     </td></tr></table>
     <br><br>
-    <button class= "login"> Log In to PayPilot→ </button>
-    <br> <p class="p-right">Don't have account? <a href="#">Signup</a></p>
+<button type="submit" form="login-form" class="login"> Log In to PayPilot→ </button>
+<br> <p class="p-right">Don't have account? <a href="#">Signup</a></p>
 </div>
 </div>
 
@@ -76,6 +79,30 @@
         <h4> &copy;2026 PayPilot.All rights reserved.</h4>
         <h4 id="h4-left">Privacy  •Terms  •Contact</h4>
      </footer>
+
+<script>
+  document.getElementById('login-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    let email = document.getElementById('email').value;
+    let password = document.getElementById('password').value;
+    let valid = true;
+
+    if (email === '') {
+      alert('Please enter your email');
+      valid = false;
+    }
+
+    if (password === '') {
+      alert('Please enter your password');
+      valid = false;
+    }
+
+    if (valid) {
+      this.submit();
+    }
+  });
+</script>
 
 </body>
 </html>

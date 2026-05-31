@@ -190,13 +190,13 @@ font-size: large;
 }
  
 input[type="text"],
+input[type="email"],
 input[type="password"] {
-  width: 100%;
+  width: 400px;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
-
 
 /* Footer */
 .div4{
@@ -235,3 +235,4 @@ h4{
      padding: 2%;
     margin-right:5%; 
 }
+

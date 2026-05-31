@@ -28,12 +28,12 @@
 
 <div class="field">
   <label>RECIPIENT</label>
-  <input type="text" placeholder="Phone number or email">
+  <input type="text" id="recipient" name="recipient" placeholder="Phone number or email">
 </div>
 
 <div class="field">
   <label>AMOUNT</label>
-  <input type="text" placeholder="PKR 0.00">
+  <input type="text" id="amount" name="amount" placeholder="PKR 0.00">
 </div>
 
 <div class="amount-buttons">
@@ -52,9 +52,69 @@
   ✅ Service Fee: PKR 0 (Free)
 </div>
 
-<button class="btn">Review Transfer →</button>
+<div id="confirm-box" style="display:none; background:#e6f4ea; padding:15px; border-radius:10px; margin-bottom:15px;">
+  <p style="color:green; font-weight:bold;">✅ Confirm Transfer</p>
+  <p>Sending <strong id="confirm-amount"></strong> to <strong id="confirm-recipient"></strong></p>
+  <button class="btn" id="confirm-btn">Confirm & Send →</button>
+</div>
+
+<span id="send-error" style="color:red; font-size:13px;"></span>
+<button class="btn" id="review-btn">Review Transfer →</button>
 
 </div>
 <div class="footer"> </div>
+
+<script>
+  // Chip click fills amount
+  document.querySelectorAll('.box').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.getElementById('amount').value = this.textContent.replace(',', '');
+    });
+  });
+
+  // Review Transfer button
+  document.getElementById('review-btn').addEventListener('click', function() {
+    let recipient = document.getElementById('recipient').value;
+    let amount = document.getElementById('amount').value;
+
+    if (recipient === '') {
+      document.getElementById('send-error').textContent = 'Please enter a recipient';
+      return;
+    }
+    if (amount === '' || amount <= 0) {
+      document.getElementById('send-error').textContent = 'Please enter a valid amount';
+      return;
+    }
+
+    document.getElementById('send-error').textContent = '';
+    document.getElementById('confirm-amount').textContent = 'PKR ' + amount;
+    document.getElementById('confirm-recipient').textContent = recipient;
+    document.getElementById('confirm-box').style.display = 'block';
+  });
+
+  // Confirm & Send — AJAX
+  document.getElementById('confirm-btn').addEventListener('click', function() {
+    let recipient = document.getElementById('recipient').value;
+    let amount = document.getElementById('amount').value;
+    let note = document.querySelector('input[placeholder="Add a note"]').value;
+
+    fetch('send.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ recipient: recipient, amount: amount, note: note })
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        alert('✅ Money sent successfully!');
+        document.getElementById('recipient').value = '';
+        document.getElementById('amount').value = '';
+        document.getElementById('confirm-box').style.display = 'none';
+      } else {
+        alert('❌ Error: ' + data.error);
+      }
+    });
+  });
+</script>
     </body>
 </html>
