@@ -16,22 +16,29 @@ $user = $result->fetch_assoc();
 <head>
     <meta charset="UTF-8">
     <title>PayPilot — Profile</title>
-    <link rel="stylesheet" href="css/profile-stylesheet.css">
+    <link rel="stylesheet" href="/paypilot/css/profile.css">
 </head>
 <body>
 
-    <header>
-        <nav>
-            <h2 class="h2-nav">Pay<em>Pilot</em></h2>
-            <ul>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#" class="sign-up">Sign-up</a></li>
-            </ul>
-        </nav>
-    </header>
+<header><nav>
+    <h2>Pay<em>Pilot</em></h2>
+    <ul>
+        <li><a href="dashboard.php"><h4>← Dashboard</h4></a></li>
+        <li>
+            <div class="user-dropdown" style="position:relative;">
+                <button class="user-btn" onclick="toggleDropdown()">
+                    <div class="user-avatar"><?php echo strtoupper(substr($user['name'], 0, 2)); ?></div>
+                    <?php echo $user['name']; ?>
+                    <span class="chevron">▾</span>
+                </button>
+                <div id="dropdown-menu" style="display:none; position:absolute; right:0; background:white; border:1px solid #e4e9f2; border-radius:10px; padding:10px; z-index:100; min-width:150px;">
+                    <a href="profile.php" style="display:block; padding:8px 15px; color:#0f1c2e; text-decoration:none;">👤 Profile</a>
+                    <a href="php/logout.php" style="display:block; padding:8px 15px; color:#e53e3e; text-decoration:none;">🚪 Logout</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</nav></header>
 
     <div id="container">
         <h1>My Profile</h1>
@@ -46,7 +53,7 @@ $user = $result->fetch_assoc();
             </div>
         </div>
 
-        <div id="view-mode">
+        <div id="view-mode" style="width:65%; background:white; border-radius:16px; border:1px solid #e4e9f2; overflow:hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.06);">
             <table>
                 <tr>
                     <td>
@@ -94,11 +101,14 @@ $user = $result->fetch_assoc();
 
         <button class="btn" onclick="showEdit()">Edit Profile</button>
 
-        <div id="edit-mode" style="display:none; width:50%;">
+        <div id="edit-mode" style="display:none; width:65%; background:white; border-radius:16px; border:1px solid #e4e9f2; padding:24px; box-shadow: 0 2px 10px rgba(0,0,0,0.06);">
             <input type="text" id="edit-name" placeholder="Full Name" value="<?php echo $user['name']; ?>"><br><br>
             <input type="text" id="edit-phone" placeholder="Phone Number" value="<?php echo $user['phone']; ?>"><br><br>
+            
+            <div class="btn-group">
             <button class="btn" onclick="saveProfile()">Save Changes</button>
             <button class="btn" style="background-color:gray;" onclick="cancelEdit()">Cancel</button>
+            </div>
         </div>
     </div>
 
@@ -126,7 +136,7 @@ $user = $result->fetch_assoc();
         formData.append('name', name);
         formData.append('phone', phone);
 
-        fetch('php/profile.php', {
+        fetch('php/profile_update.php', {
             method: 'POST',
             body: formData
         })
@@ -137,6 +147,16 @@ $user = $result->fetch_assoc();
             }
         });
     }
+
+    function toggleDropdown() {
+    var menu = document.getElementById('dropdown-menu');
+    menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+    }
+    document.addEventListener('click', function(e) {
+    if (!e.target.closest('.user-dropdown')) {
+        document.getElementById('dropdown-menu').style.display = 'none';
+    }
+    });
     </script>
 
 </body>
