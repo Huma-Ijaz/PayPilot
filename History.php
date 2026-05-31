@@ -4,6 +4,11 @@ require __DIR__ . '/php/db.php';
 
 $user_id = $_SESSION['user_id'];
 
+$stmt0 = $conn->prepare("SELECT * FROM users WHERE id = ?");
+$stmt0->bind_param("i", $user_id);
+$stmt0->execute();
+$user = $stmt0->get_result()->fetch_assoc();
+
 // Get ALL transactions
 $stmt = $conn->prepare("SELECT * FROM transactions WHERE user_id = ? ORDER BY created_at DESC");
 $stmt->bind_param("i", $user_id);
@@ -27,6 +32,7 @@ $stmt4 = $conn->prepare("SELECT * FROM transactions WHERE user_id = ? AND type =
 $stmt4->bind_param("i", $user_id);
 $stmt4->execute();
 $topup = $stmt4->get_result()->fetch_all(MYSQLI_ASSOC);
+
 
 // Helper function to build table rows
 function buildRows($transactions) {
@@ -59,18 +65,25 @@ function buildRows($transactions) {
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
-    <header><nav>
-        <h2>Pay<em>Pilot</em></h2>
-        <ul>
-            <li><a href="dashboard.php"><h4>←Dashboard</h4></a></li>
-            <li><div class="user-dropdown">
-                <button class="user-btn">
-                    <div class="user-avatar"><?php echo strtoupper(substr($_SESSION['name'] ?? 'U', 0, 2)); ?></div>
+<header><nav>
+    <h2>Pay<em>Pilot</em></h2>
+    <ul>
+        <li><a href="dashboard.php"><h4>← Dashboard</h4></a></li>
+        <li>
+            <div class="user-dropdown" style="position:relative;">
+                <button class="user-btn" onclick="toggleDropdown()">
+                    <div class="user-avatar"><?php echo strtoupper(substr($user['name'], 0, 2)); ?></div>
+                    <?php echo $user['name']; ?>
                     <span class="chevron">▾</span>
                 </button>
-            </div></li>
-        </ul>
-    </nav></header>
+                <div id="dropdown-menu" style="display:none; position:absolute; right:0; background:white; border:1px solid #e4e9f2; border-radius:10px; padding:10px; z-index:100; min-width:150px;">
+                    <a href="profile.php" style="display:block; padding:8px 15px; color:#0f1c2e; text-decoration:none;">👤 Profile</a>
+                    <a href="php/logout.php" style="display:block; padding:8px 15px; color:#e53e3e; text-decoration:none;">🚪 Logout</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</nav></header>
 
     <div class="set">
         <h2>Transaction History</h2>
@@ -174,6 +187,17 @@ function buildRows($transactions) {
             $('#' + id).show();
         });
     });
+
+    function toggleDropdown() {
+    var menu = document.getElementById('dropdown-menu');
+    menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+    }
+    document.addEventListener('click', function(e) {
+    if (!e.target.closest('.user-dropdown')) {
+        document.getElementById('dropdown-menu').style.display = 'none';
+    }
+    });
+
     </script>
 
 </body>
