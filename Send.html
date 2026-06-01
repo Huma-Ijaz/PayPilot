@@ -98,7 +98,7 @@
     let amount = document.getElementById('amount').value;
     let note = document.querySelector('input[placeholder="Add a note"]').value;
 
-    fetch('send.php', {
+    fetch('php/send.php', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ recipient: recipient, amount: amount, note: note })

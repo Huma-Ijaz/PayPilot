@@ -101,7 +101,7 @@
 
   // Load recent top-ups from database
   function loadTopups() {
-    fetch('wallet.php')
+    fetch('php/wallet.php')
     .then(response => response.json())
     .then(data => {
       let tbody = document.getElementById('topups-tbody');
@@ -148,7 +148,7 @@
 
     document.getElementById('wallet-error').textContent = '';
 
-    fetch('wallet.php', {
+    fetch('php/wallet.php', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ amount: amount, method: method })
