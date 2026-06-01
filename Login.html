@@ -5,16 +5,24 @@
 <link rel="stylesheet" href="css/login.css">
 <title> Login </title></head>
 <body>
-    <header><nav>
-<h2> Pay<em>Pilot</em> </h2>
-<ul>
-    <li><a href="#"> Features </a></li>
-    <li><a href="#"> Pricing </a></li>
-    <li><a href="#"> About</a></li>
-    <li><a href="login.html"> Login </a></li>
-    <li><a href="register.html" class="signup"> Signup </a></li>
-</ul>
-</nav></header>
+    <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+                <a class="navbar-brand" href="#">Pay<em>Pilot</em></a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="Index.html#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Index.html#pricing">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Index.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="btn btn-primary px-3 ms-2" href="register.html">Sign Up</a></li>
+                </ul>
+		</div>
+            </nav>
+        </header>
 
 <div class="div1"> 
 <div id="left">
@@ -74,11 +82,11 @@
 </div>
 </div>
 
-  <footer class="div4">
-        <h4 id="h4-right">Pay<em>Pilot</em></h4>
-        <h4> &copy;2026 PayPilot.All rights reserved.</h4>
-        <h4 id="h4-left">Privacy  •Terms  •Contact</h4>
-     </footer>
+        <footer>
+            <h2 class="brand">Pay<em>Pilot</em></h2>
+            <p class="p-footer">© 2026 PayPilot. All rights reserved.</p>
+            <p class="p-footer">Privacy · Terms · Contact</p>
+        </footer>
 
 <script>
   document.getElementById('login-form').addEventListener('submit', function(e) {

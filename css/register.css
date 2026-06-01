@@ -96,7 +96,7 @@ nav a {
 }
 
 
-#div1{
+#div1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,16 +104,16 @@ nav a {
     min-height: 100%;
     height: auto;
     width: 40%;
-    background-color: #0d2b6e;;
-    gap:20px;
+    background-color: #0d2b6e;
+    background: #0d2b6e;
+    gap: 20px;
     flex: 0 0 38%;
-    padding: 20px 56px 80px;
     padding: 40px;
     overflow: visible;
 }
 
 .launching {
-    color: whitesmoke;
+    color: #ffffff;
     font-size: 18px;
     padding: 0;
     margin: 0;
@@ -122,11 +122,10 @@ nav a {
     font-weight: 550;
     font-style: italic;
     align-self: flex-start;
-
 }
 
 .h1-left {
-    color: whitesmoke;
+    color: #ffffff;
     font-size: 40px;
     text-transform: uppercase;
     margin: 0;
@@ -137,7 +136,9 @@ nav a {
 #div1 pre {
     margin: 0;
     align-self: flex-start;
+    color: #ffffff;
 }
+
 
 em {
     color: #1a6ef5;
@@ -149,20 +150,18 @@ em {
     font-style: normal;
 }
 
-.features{
+.features {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: #0d2b6e;
 }
 
 .features ul {
     list-style: none;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 16px;
+    flex-direction: column;
+    gap: 12px;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -170,41 +169,55 @@ em {
 
 .features li {
     display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    flex: 1 1 220px;
+    align-items: center;
+    gap: 14px;
+    background-color: #1a3a80;
+    border-radius: 10px;
+    padding: 14px 16px;
 }
+
 .icon {
     font-size: 20px;
-    margin-bottom: 10px;
     border-radius: 10px;
-    border-color: #0d2b6e;
-    border-width: 1px;
-    border-style: solid;
-    width: 40px;
-    height: 40px; 
+    border: 1px solid #2a4fa0;
+    width: 42px;
+    height: 42px;
     flex-shrink: 0;
     display: flex;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
-    background-color: #0d2b6e;
+    background-color: #1a6ef5;
+    margin-bottom: 0;
+}
+.left{
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    color: #a8c4e8;
+    line-height: 1.55;
 }
 
 .text {
-    background-color: #0d2b6e;
+    background-color: transparent;
 }
+
 .text h4 {
     font-size: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     display: block;
     font-weight: 700;
-    color: white;
+    color: #ffffff;
 }
-.text p{
+
+.text p {
     font-size: 14px;
     font-weight: 400;
-    color:#a0b4d6;
+    color: #a8c4e8;
     line-height: 1.55;
+    margin: 0;
+}
+h3{
+    color:#ffffff;
 }
 
 
@@ -309,7 +322,7 @@ color: #1f3a74;
 letter-spacing: 1px; 
 }
 
-/* 
+
 footer {
       height: 15%;
       width: 100%;
@@ -323,7 +336,7 @@ footer {
       letter-spacing: 1px;
       gap: 10px;
       border-top: 1px solid #0d2b6e;
-} */
+}
 
 
 h4{color:#e7feff;
@@ -339,25 +352,50 @@ h4{color:#e7feff;
     margin-right:5%; 
 }
 
-#h4-right{
-   color:#e7feff;
-   font-weight: 200;
-   padding: 2%;
-   margin-left: 5%;
+.brand {
+    font-size: 25px;
+    color: white;
+    margin: 0;
+    text-align: left;
+    padding-left: 30px;
+    text-transform: none;
 }
 
-.div4{
-background-color: #0d2b6e;
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding:10px 20px;
+.brand em {
+    font-style: normal;
 }
 
-.div4 h4{
-    color:#e7feff;
-    margin:0;
-    padding: 5px;
+.p-footer {
+    font-size: 15px;
+    color:#7393b3;
+    margin: 0;
+    white-space: nowrap;
 }
 
 
+.navbar-toggler{
+    display:none;
+}
+.navbar.bg-dark {
+    background-color: #0d2b6e !important;
+}
+.navbar-brand {
+    font-size: 25px;
+    font-weight: bold;
+    color: white !important;
+}
+
+.navbar-brand em {
+    font-style: normal;
+    color: #1a6ef5;
+}
+
+.navbar .btn-primary {
+    background-color: #1a6ef5 !important;
+    border-color: #1a6ef5 !important;
+    color: white !important;
+    border-radius: 10px;
+    border: 1px solid #1a6ef5;
+    box-shadow: #0d2b6e 0px 4px 8px;;
+
+}
