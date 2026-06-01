@@ -7,17 +7,22 @@
     </head>
 
 <body>
-        <header>
-            <nav>
-                <h2 class="h2-nav">Pay<em>Pilot</em></h2>
+                <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+                <a class="navbar-brand" href="#">Pay<em>Pilot</em></a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+<span class="navbar-toggler-icon"></span>
+</button>
 
-                <ul>
-                    <li><a href="index.html">Features</a></li>
-                    <li><a href="index.html">Pricing</a></li>
-                    <li><a href="index.html">About</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="register.html" class="sign-up">Sign-up</a></li>
+<div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="btn btn-primary px-3 ms-2" href="register.html">Sign Up</a></li>
                 </ul>
+		</div>
             </nav>
         </header>
 <main class="register-layout">
@@ -27,7 +32,7 @@
         Join <em>Paypilot</em><br>
         today.
     </h1>
-                <p class="left-desc">Start sending and receiving 
+                <p class="left">Start sending and receiving 
                 payments in seconds. No hidden fees. No hassle.</p>
 <div class="features">
                 <ul>
@@ -107,11 +112,11 @@
 </div>
 
 </main>
-       <footer class="div4">
-        <h4 id="h4-right">Pay<em>Pilot</em></h4>
-        <h4> &copy;2026 PayPilot.All rights reserved.</h4>
-        <h4 id="h4-left">Privacy  •Terms  •Contact</h4>
-     </footer>
+        <footer>
+            <h2 class="brand">Pay<em>Pilot</em></h2>
+            <p class="p-footer">© 2026 PayPilot. All rights reserved.</p>
+            <p class="p-footer">Privacy · Terms · Contact</p>
+        </footer>
     
        <script>
   document.getElementById('register-form').addEventListener('submit', function(e) {
