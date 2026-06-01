@@ -36,45 +36,46 @@ font-weight: 800;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-header{
-background-color:#f0f3f9 ;
-color: white;
-position: fixed;
-width: 100%;
-height: 15%;
-padding: 40px;
+header {
+    background-color: #0d2b6e;
+    padding: 30px;
+    letter-spacing: 1px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    color: #1a6ef5;
 }
 
-nav{
-height: 15%;
-width:100%;
-display: flex;
-justify-content: space-between;
-align-items: center;
+
+nav {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav ul{
-list-style: none;
-display: flex;
-gap: 20px;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
-nav a{
-color:black;
-text-decoration:none;
-font-family: Arial;
-font-weight:bold;
-font-size: 20px;
-gap: 10px;
+nav a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px;
 }
-
 h1{
     color:white;
     
 }
 
 h2{
-    color: black;
+    color: white ;
 }
 
 #h-right{
