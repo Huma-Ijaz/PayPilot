@@ -1,6 +1,6 @@
 <?php
-require 'db.php';
-
+require __DIR__ . '/session_check.php'
+require __DIR__ . '/db.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     $name     = $_POST['name'];
