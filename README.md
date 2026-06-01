@@ -64,7 +64,7 @@ PayPilot is a full-stack fintech web application built as part of CSC336 Web Tec
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/PayPilot.git
+git clone https://github.com/Huma-Ijaz/PayPilot.git
 
 # 2. Move to XAMPP
 # Place the PayPilot folder inside C:/xampp/htdocs/
