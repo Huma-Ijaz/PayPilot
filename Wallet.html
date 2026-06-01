@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-    <meta charset="UTF-8">
-    <title>Wallet</title>
-    <link rel="stylesheet" href="css/Wallet.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title> Wallet </title>
+<link rel = "stylesheet" href="css/wallet.css">
+    </head>
     <body>
         <Header><nav>
 <h2> Pay<em>Pilot</em> </h2>
 <ul>
-    <li> <a href="Dashboard.html"><h4>←Dashboard</h4> </a></li>
+    <li> <a href="dashboard.html"><h4>←Dashboard</h4> </a></li>
     <li><div class="user-dropdown">
     <button class="user-btn">
         <div class="user-avatar">AH</div>  <!-- initials -->
@@ -101,7 +101,7 @@
 
   // Load recent top-ups from database
   function loadTopups() {
-    fetch('php/wallet.php')
+    fetch('wallet.php')
     .then(response => response.json())
     .then(data => {
       let tbody = document.getElementById('topups-tbody');

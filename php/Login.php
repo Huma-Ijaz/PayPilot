@@ -1,6 +1,7 @@
 <?php
 session_start();
 require __DIR__ . '/db.php';
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     $email    = $_POST['email'];
@@ -27,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
 
         // Go to dashboard
-        header('Location: Dashboard.html');
+        header('Location: ../dashboard.php');
         exit;
 
     } else {

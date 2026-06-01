@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-    <link rel="stylesheet" href="css/Login.css">
-</head>
+        <meta charset="UTF-8">
+<link rel="stylesheet" href="css/login.css">
+<title> Login </title></head>
 <body>
     <Header><nav>
 <h2> Pay<em>Pilot</em> </h2>
@@ -12,8 +11,8 @@
     <li><a href="#"> Features </a></li>
     <li><a href="#"> Pricing </a></li>
     <li><a href="#"> About</a></li>
-    <li><a href="#"> Login </a></li>
-    <li><a href="#" class="signup"> Signup </a></li>
+    <li><a href="login.html"> Login </a></li>
+    <li><a href="register.html" class="signup"> Signup </a></li>
 </ul>
 </nav></Header>
 
@@ -52,7 +51,7 @@
 <p class="p-right">Log into your Paypilot account to Continue</p>
 <br>
 
-<form id="login-form" action="php/Login.php" method="POST"><table id="table">
+<form id="login-form" action="php/login.php" method="POST"><table id="table">
 <tr><td width="100%"  class="field"><label>Email Address</label>
 <input type="email" id="email" name="email" placeholder= "your@gmail.com" > </td></tr>
 <tr><td class="field"> </td></tr>
@@ -63,7 +62,7 @@
 <table style="width:100%; margin-top:10px;">
 <tr>
     <td>
-    <input type="checkbox" id="remember" name="remember" checked color:"color:black;"> Remember me
+    <input type="checkbox" id="remember" name="remember" checked> Remember me
     </td>
 
     <td style="text-align: right;">
@@ -71,7 +70,7 @@
     </td></tr></table>
     <br><br>
 <button type="submit" form="login-form" class="login"> Log In to PayPilot→ </button>
-<br> <p class="p-right">Don't have account? <a href="#">Signup</a></p>
+<br> <p class="p-right">Don't have account? <a href="register.html">Signup</a></p>
 </div>
 </div>
 

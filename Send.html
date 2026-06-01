@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    <meta charset="UTF-8">
-    <title>Send</title>
-    <link rel="stylesheet" href="css/Send.css">
-</head>
+        <meta charset="UTF-8">
+        <title> Send </title>
+<link rel = "stylesheet" href="css/send.css">
+    </head>
     <body>
         <Header><nav>
 <h2> Pay<em>Pilot</em> </h2>
 <ul>
-    <li> <a href="Dashboard.html"><h4>←Dashboard</h4> </a></li>
+    <li> <a href="dashboard.html"><h4>←Dashboard</h4> </a></li>
     <li><div class="user-dropdown">
     <button class="user-btn">
         <div class="user-avatar">AH</div>  <!-- initials -->
@@ -98,7 +98,7 @@
     let amount = document.getElementById('amount').value;
     let note = document.querySelector('input[placeholder="Add a note"]').value;
 
-    fetch('php/send.php', {
+    fetch('send.php', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ recipient: recipient, amount: amount, note: note })

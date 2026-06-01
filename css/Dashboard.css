@@ -9,7 +9,7 @@ body{
 background-color: #f0f3f9;;
     color: var(--ink);
     overflow-x: hidden;
-height: 100vh;
+min-height: 100vh;
 width: 100%;
 }
 
@@ -136,11 +136,11 @@ p{
 .display-card{
     background-color: #0d2b6e;
     width:85%;
-    height:35%;
+    height: auto;
     padding:30px;
     margin-left: 5%;
     border-radius: 16px;
-    
+    margin-bottom: 20px;
 }
 
 .cardbox{
@@ -174,11 +174,10 @@ p{
 
 .display-card1{
     width:85%;
-    height:35%;
-    padding:30px;
+    padding: 10px 30px 30px 30px;
     margin-left: 5%;
     border-radius: 16px;
-  
+    margin-bottom: 30px;
 }
 
 .cardgrid{
@@ -187,12 +186,27 @@ p{
 }
 
 .gridbox{
-    height:3.5cm;
+    height: 150px;
     width: 97%;
     background-color: white;
     border-radius: 16px;
     text-align: center;
     gap:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.gridbox {
+    cursor: pointer;
+}
+
+.gridbox:hover {
+    background-color: #ebf2ff;
+    transform: scale(1.02);
+    transition: all 0.2s ease;
 }
 
 /* Outer wrapper */
